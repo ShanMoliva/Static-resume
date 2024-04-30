@@ -25,7 +25,7 @@
             skillsList.appendChild(li);
         });
 
-        const experienceList = document.getElementById('experience');
+        const experienceList = document.getElementById('Work Experience');
         data.experience.forEach(exp => {
             const li = document.createElement('li');
             li.innerText = exp;
@@ -41,7 +41,7 @@
 
         document.getElementById('name').innerText = data.personalInfo.name;
         document.getElementById('address').innerText = data.personalInfo.address;
-        document.getElementById('phoneNumber').innerText = data.personalInfo.phoneNumber;
+        document.getElementById('mobileNumber').innerText = data.personalInfo.phoneNumber;
         document.getElementById('email').innerText = data.personalInfo.email;
         document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
         document.getElementById('sex').innerText = data.personalInfo.sex;
