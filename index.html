@@ -26,6 +26,8 @@
         document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
         document.getElementById('sex').innerText = data.personalInfo.sex; 
         
+        document.getElementById('degree').innerText = data.education.degree;
+        document.getElementById('university').innerText = data.education.university;  
     })
   }
 
@@ -57,6 +59,7 @@
     <p id="phoneNumber"></p>
     <p></p><h4>Email:</h4>
     <p id="email"></p>
+    <h4>Birthdate:</h4>
     <p id="birthdate"></p>
     <p id="sex"></p>
    
@@ -104,9 +107,9 @@
      <div class="w3-container w3-card w3-white">
             <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>University of southern philippines foundation</b></h5>
+              <h5 class="w3-opacity"><b id="University">University of southern philippines foundation</b></h5>
               <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Current</h6>
-              <p>All I need to know in one place</p>
+              <p id="degree">degree: 'Bachelor of Science in Information Technology (BSIT)</p>
               <hr>
             </div>
 
