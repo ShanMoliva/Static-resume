@@ -18,7 +18,7 @@
     function getData(){
     fetch('https://web-service-2-d6qj.onrender.com/')
     .then(response => response.json())
-    .then(data => {
+    .then(profile => {
         document.getElementById('degree').innerText = data.education.degree;
         document.getElementById('year').innerText = data.education.year;
         document.getElementById('university').innerText = data.education.university;
