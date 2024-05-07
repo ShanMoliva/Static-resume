@@ -13,43 +13,19 @@
     window.addEventListener('load', () => {
       getData();
     });
-  </script>
-  <script>
+
     function getData(){
     fetch('https://web-service-2-d6qj.onrender.com/')
     .then(response => response.json())
-    .then(profile => {
-        document.getElementById('degree').innerText = data.education.degree;
-        document.getElementById('year').innerText = data.education.year;
-        document.getElementById('university').innerText = data.education.university;
+    .then(data => {
 
-        const skillsList = document.getElementById('skills');
-        data.skills.forEach(skill => {
-            const li = document.createElement('li');
-            li.innerText = skill;
-            skillsList.appendChild(li);
-        });
-
-        const experienceList = document.getElementById('Work Experience');
-        data.experience.forEach(exp => {
-            const li = document.createElement('li');
-            li.innerText = exp;
-            experienceList.appendChild(li);
-        });
-
-        const awardsList = document.getElementById('awards');
-        data.awards.forEach(award => {
-            const li = document.createElement('li');
-            li.innerText = award;
-            awardsList.appendChild(li);
-        });
-
-        document.getElementById('name').innerText = profile.personalInfo.name;
-        document.getElementById('address').innerText = profile.personalInfo.address;
-        document.getElementById('mobileNumber').innerText = profile.personalInfo.phoneNumber;
-        document.getElementById('email').innerText = profile.personalInfo.email;
-        document.getElementById('birthdate').innerText = profile.personalInfo.birthdate;
-        document.getElementById('sex').innerText = profile.personalInfo.sex; 
+        document.getElementById('name').innerText = data.personalInfo.name;
+        document.getElementById('address').innerText = data.personalInfo.address;
+        document.getElementById('mobileNumber').innerText = data.personalInfo.phoneNumber;
+        document.getElementById('email').innerText = data.personalInfo.email;
+        document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
+        document.getElementById('sex').innerText = data.personalInfo.sex; 
+        
     })
   }
 
