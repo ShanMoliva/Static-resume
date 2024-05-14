@@ -28,14 +28,14 @@
         
         document.getElementById('degree').innerText = data.education.degree;
 
-        document.getElementById('job1').innerText = data.experience.job1;
-        document.getElementById('job2').innerText = data.experience.job2;
-        document.getElementById('job3').innerText = data.experience.job3;
-        document.getElementById('job4').innerText = data.experience.job4;
-        document.getElementById('description1').innerText = data.experience.description1;
-        document.getElementById('description2').innerText = data.experience.description2;
-        document.getElementById('description3').innerText = data.experience.description3;
-        document.getElementById('description4').innerText = data.experience.description4;
+        document.getElementById('job1').innerText = data.experience.job[0];
+        document.getElementById('job2').innerText = data.experience.job[1];
+        document.getElementById('job3').innerText = data.experience.job[2];
+        document.getElementById('job4').innerText = data.experience.job[3];
+        document.getElementById('description1').innerText = data.experience.description1[0];
+        document.getElementById('description2').innerText = data.experience.description2[1];
+        document.getElementById('description3').innerText = data.experience.description3[3];
+        document.getElementById('description4').innerText = data.experience.description4[4];
         
     })
   }
@@ -129,6 +129,15 @@
               <p id="degree"></p>
               <hr>
             </div>
+
+            <div class="w3-container w3-card w3-white">
+              <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+              <div class="w3-container">
+                <h5 class="w3-opacity"><b id="university"></b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Current</h6>
+                <p id="degree2"></p>
+                <hr>
+              </div>
             
                              </div>
 
